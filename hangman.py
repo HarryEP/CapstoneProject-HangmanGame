@@ -6,6 +6,8 @@ Then we can repeat this, and have a score for how many times the word is guessed
 Also, we will make sure not to repeat words.
 '''
 
+import random
+
 def main():
     
     wordbank = ['Harry','Molly','understanding']
@@ -18,8 +20,8 @@ def main():
 def playGame():
     pass
 
-def randomNumberGenerator():
-    pass
+def randomNumberGenerator(num):
+    return random.randint(1,num)
 
 def selectWord(words):
     selectedWord = words[1]
