@@ -6,14 +6,30 @@ Then we can repeat this, and have a score for how many times the word is guessed
 Also, we will make sure not to repeat words.
 '''
 
-def Main():
+def main():
+    
+    wordbank = ['Harry','Molly','understanding']
+    play = True
+    while play:
+        playGame()
+        play = playAgain()
+    print("Thanks for playing")
+
+def playGame():
     pass
 
-def PlayGame():
+def selectWord():
     pass
 
-def SelectWord():
-    pass
+def playAgain():
+    invalidAnswer = True
+    while invalidAnswer:
+        userAnswer = input("Would you want to play again ('Yes'/'No')?: ")
+        if userAnswer.upper() == "YES":
+            return True
+        elif userAnswer.upper() == "NO":
+            return False
+        else:
+            print("Please answer either 'yes' or 'no'.")
 
-def PlayAgain():
-    pass
+main()
