@@ -24,7 +24,7 @@ def randomNumberGenerator(num):
     return random.randint(1,num)
 
 def selectWord(words):
-    selectedWord = words[1]
+    selectedWord = words[randomNumberGenerator(len(words)) - 1]
     return selectedWord
 
 def playAgain():
