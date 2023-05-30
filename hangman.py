@@ -5,3 +5,15 @@ while continuining to display the word so far.
 Then we can repeat this, and have a score for how many times the word is guessed vs not guessed.
 Also, we will make sure not to repeat words.
 '''
+
+def Main():
+    pass
+
+def PlayGame():
+    pass
+
+def SelectWord():
+    pass
+
+def PlayAgain():
+    pass
