@@ -18,8 +18,12 @@ def main():
 def playGame():
     pass
 
-def selectWord():
+def randomNumberGenerator():
     pass
+
+def selectWord(words):
+    selectedWord = words[1]
+    return selectedWord
 
 def playAgain():
     invalidAnswer = True
