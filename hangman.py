@@ -10,15 +10,18 @@ import random
 
 def main():
     
-    wordbank = ['Harry','Molly','understanding']
+    wordbank = ['Harry','Molly','understanding'] #random words while we test
     play = True
     while play:
-        playGame()
+        playGame(wordbank)
         play = playAgain()
     print("Thanks for playing")
 
-def playGame():
-    pass
+def playGame(wordbank):
+    secretWord = selectWord(wordbank)
+    #userguess to be implemented here...
+    for letter in secretWord:
+        print(letter)
 
 def randomNumberGenerator(num):
     return random.randint(1,num)
