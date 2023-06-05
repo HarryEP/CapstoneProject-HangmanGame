@@ -26,11 +26,16 @@ def playGame(wordbank):
     guessedLetters = []
     secretWord = selectWord(wordbank)
     guessedLetters = letterGuess(guessedLetters)
+    hangmanToDisplay = ""
     for letter in secretWord:
         for guess in guessedLetters:
             if letter == guess:
                 print(f"Letter {letter} = guess {guess}")
+                hangmanToDisplay += letter
+            else:
+                hangmanToDisplay += "_"
         print(letter)
+    print(hangmanToDisplay)
 
 def randomNumberGenerator(num):
     return random.randint(1,num)
