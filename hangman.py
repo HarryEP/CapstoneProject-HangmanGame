@@ -17,10 +17,19 @@ def main():
         play = playAgain()
     print("Thanks for playing")
 
+def letterGuess(guessedLetters):
+    userGuess = input("Which letter would you like to guess?: ")
+    guessedLetters.append(userGuess.upper())
+    return guessedLetters
+
 def playGame(wordbank):
+    guessedLetters = []
     secretWord = selectWord(wordbank)
-    #userguess to be implemented here...
+    guessedLetters = letterGuess(guessedLetters)
     for letter in secretWord:
+        for guess in guessedLetters:
+            if letter == guess:
+                print(f"Letter {letter} = guess {guess}")
         print(letter)
 
 def randomNumberGenerator(num):
@@ -28,7 +37,7 @@ def randomNumberGenerator(num):
 
 def selectWord(words):
     selectedWord = words[randomNumberGenerator(len(words)) - 1]
-    return selectedWord
+    return selectedWord.upper()
 
 def playAgain():
     invalidAnswer = True
